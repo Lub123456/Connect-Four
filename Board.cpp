@@ -22,9 +22,6 @@ void Board::display() const {
 }
 
 bool Board::dropPiece(int col, char symbol) {
-    if (col < 0 || col >= COLUMNS || grid[0][col] != ' ')
-        //std::cout << "Please enter a valid column (from 1 to 7)\n";
-        return false;
 
     for (int row = ROWS - 1; row >= 0; --row) {
         if (grid[row][col] == ' ') {

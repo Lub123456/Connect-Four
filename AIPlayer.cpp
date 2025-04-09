@@ -9,11 +9,7 @@ AIPlayer::AIPlayer(std::string name, char symbol) : Player(name, symbol) {
 }
 
 int AIPlayer::chooseColumn(const Board& board) const {
-/*
-    int column = std::rand() % 7;
-    std::cout << name << " (" << symbol << ") chooses column " << (column + 1) << std::endl;
-    return column;
-*/
+
     const auto& grid = board.getGrid();
     std::vector<int> validColumns;
 

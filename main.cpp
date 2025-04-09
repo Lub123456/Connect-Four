@@ -1,4 +1,6 @@
 #include <iostream>
+#include <limits>
+
 #include "Game.h"
 #include "HumanPlayer.h"
 #include "AIPlayer.h"
@@ -6,16 +8,26 @@
 
 int main() {
     std::cout << "Welcome to Connect Four!\n";
-    std::cout << "Do you want to play solo (1) or duo (2)? [Enter 1 or 2] : ";
 
     int choice;
-    do {
-        std::cin >> choice;
-        if (choice != 1 && choice != 2) {
-            std::cout << "Please enter a valid choice (1 or 2): ";
-        }
-    } while (choice != 1 && choice != 2);
+    bool playing = true;
 
+    while (playing) {
+        std::cout << "Do you want to play solo (1) or duo (2)? [Enter 1 or 2] : ";
+        std::cin >> choice;
+
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Please enter an integer !\n";
+        } else if (choice != 1 && choice != 2) {
+            std::cout << "Please enter 1 or 2\n";
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        } else {
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            playing = false;
+        }
+    }
 
     if (choice == 1) {
         std::cout << "Enter your player's name : ";
