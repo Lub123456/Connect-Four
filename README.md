@@ -60,6 +60,9 @@ Here is a preview of the game interface:
 
 ![img.png](img.png)
 
+On this link you can find a presentation video of the game:
+https://youtu.be/RoUa44Xjk3U
+
 ---
 
 ## ️🗃️ Project Structure
