@@ -7,7 +7,7 @@
 
 
 int main() {
-    std::cout << "Welcome to Connect Four!\n";
+    std::cout << " --- Welcome to Connect Four! ---\n";
 
     int choice;
     bool playing = true;
