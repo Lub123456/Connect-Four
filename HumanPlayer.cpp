@@ -9,7 +9,7 @@ int HumanPlayer::chooseColumn(const Board& board) const {
     int column;
 
     while (true) {
-        std::cout << name << " (" << symbol << "), enter a column [1-7]: ";
+        std::cout << "It's " << name << " turn (" << symbol << "). Choose a column [1-7]: ";
         std::cin >> column;
 
         if (std::cin.fail()) {
