@@ -30,5 +30,6 @@ void Game::play() {
         switchPlayer();
     }
 
+    board.display();
     std::cout << "It's a draw!" << std::endl;
 }
